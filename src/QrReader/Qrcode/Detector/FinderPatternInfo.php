@@ -1,5 +1,5 @@
 <?php
-namespace QrHelperQrReaderQrcodeDetector;
+namespace QrHelper\QrReader\Qrcode\Detector;
 final class FinderPatternInfo {
     private $bottomLeft;
     private $topLeft;
