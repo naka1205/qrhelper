@@ -1,14 +1,8 @@
 <?php
 namespace QrHelper\QrReader;
 
-use QrReader\Common\Detector\MathUtils;
+use QrHelper\QrReader\Common\Detector\MathUtils;
 
-/**
- * <p>Encapsulates a point of interest in an image containing a barcode. Typically, this
- * would be the location of a finder pattern or the corner of the barcode, for example.</p>
- *
- * @author Sean Owen
- */
 class ResultPoint {
 
     private $x;
