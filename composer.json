@@ -1,0 +1,21 @@
+{
+    "name": "naka507/qrhelper",
+    "description": "QRCODE HELP FOR PHP",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "naka1205",
+            "email": "171453643@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6"
+    },
+    "autoload": {
+        "files": ["src/functions.php"],
+        "psr-4": {
+            "QrHelper\\": "src/"
+        }
+    }
+}
