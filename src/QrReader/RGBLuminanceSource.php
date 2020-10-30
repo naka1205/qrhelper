@@ -1,5 +1,6 @@
 <?php
 namespace QrHelper\QrReader;
+use InvalidArgumentException;
 
 final class RGBLuminanceSource extends LuminanceSource {
 

@@ -1,6 +1,7 @@
 <?php
 
 namespace QrHelper\QrReader;
+use InvalidArgumentException;
 
 final class IMagickLuminanceSource extends LuminanceSource {
 

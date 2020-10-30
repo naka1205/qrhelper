@@ -1,5 +1,6 @@
 <?php
 namespace QrHelper\QrReader\Common;
+use InvalidArgumentException;
 
 final class BitArray  {
 

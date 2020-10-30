@@ -4,7 +4,7 @@ namespace QrHelper\QrReader;
 
 use QrHelper\QrReader\Common\BitArray;
 use QrHelper\QrReader\Common\BitMatrix;
-
+use InvalidArgumentException;
 
 final class BinaryBitmap {
 
@@ -13,7 +13,7 @@ final class BinaryBitmap {
 
     public function __construct($binarizer) {
         if ($binarizer == null) {
-            throw new \InvalidArgumentException("Binarizer must be non-null.");
+            throw new InvalidArgumentException("Binarizer must be non-null.");
         }
         $this->binarizer = $binarizer;
     }

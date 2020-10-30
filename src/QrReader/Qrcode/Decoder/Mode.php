@@ -1,5 +1,6 @@
 <?php
 namespace QrHelper\QrReader\Qrcode\Decoder;
+use InvalidArgumentException;
 
 class Mode {
     static  $TERMINATOR;
@@ -66,7 +67,7 @@ class Mode {
                 // 0xD is defined in GBT 18284-2000, may not be supported in foreign country
                 return self::$HANZI;
             default:
-                throw new \InvalidArgumentException();
+                throw new InvalidArgumentException();
         }
     }
 

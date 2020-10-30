@@ -54,6 +54,8 @@ final class QrReader
 
                     break;
             }
+            
+            $im = $this->resize($im,370,370);
 
             if($isUseImagickIfAvailable && extension_loaded('imagick')) {
                 $width = $im->getImageWidth();
@@ -76,6 +78,14 @@ final class QrReader
         }catch( ChecksumException $er){
             $this->result = false;
         }
+    }
+
+    public function resize($image,$w,$h){
+        $width = imagesx($image);
+        $height = imagesy($image);
+        $thumb = imagecreatetruecolor ($w, $h);
+        imagecopyresized ($thumb, $image, 0, 0, 0, 0, $w, $h, $width, $height);
+        return $thumb;
     }
 
     public function text()

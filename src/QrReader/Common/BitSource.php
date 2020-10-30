@@ -1,5 +1,6 @@
 <?php
 namespace QrHelper\QrReader\Common;
+use InvalidArgumentException;
 
 final class BitSource {
 
@@ -37,7 +38,7 @@ final class BitSource {
    */
   public function readBits($numBits) {
     if ($numBits < 1 || $numBits > 32 || $numBits > $this->available()) {
-      throw new \InvalidArgumentException(strval($numBits));
+      throw new InvalidArgumentException(strval($numBits));
     }
 
     $result = 0;

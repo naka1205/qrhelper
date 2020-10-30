@@ -1,5 +1,7 @@
 <?php
 namespace QrHelper\QrReader\Common;
+use UnexpectedValueException;
+use InvalidArgumentException;
 
 final class CharacterSetECI
 {
@@ -87,7 +89,7 @@ final class CharacterSetECI
     public static function getCharacterSetECIByValue($value)
     {
         if ($value < 0 || $value >= 900) {
-            throw new Exception\InvalidArgumentException('Value must be between 0 and 900');
+            throw new InvalidArgumentException('Value must be between 0 and 900');
         }
         if (false !== ($key = array_search($value, self::$additionalValues))) {
             $value = $key;
@@ -97,7 +99,7 @@ final class CharacterSetECI
         {
             self::setName($value);
             return new self($value);
-        } catch (Exception\UnexpectedValueException $e) {
+        } catch ( UnexpectedValueException $e) {
             return null;
         }
     }

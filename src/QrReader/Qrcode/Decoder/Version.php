@@ -3,6 +3,7 @@ namespace QrHelper\QrReader\Qrcode\Decoder;
 
 use QrHelper\QrReader\FormatException;
 use QrHelper\QrReader\Common\BitMatrix;
+use InvalidArgumentException;
 
 class Version
 {

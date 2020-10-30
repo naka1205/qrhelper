@@ -1,6 +1,6 @@
 <?php
 namespace QrHelper\QrReader\Common;
-
+use InvalidArgumentException;
 
 final class BitMatrix {
     private $width;
